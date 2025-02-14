@@ -62,24 +62,11 @@ const ScanDetailPage = lazy(
 );
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const checkAuth = async () => {
-      const {
-        data: { user },
-      } = await supabaseClient.auth.getUser();
-      setIsAuthenticated(user !== null);
-    };
-
-    checkAuth();
-  }, []);
-
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
-        <AuthGuard authenticated={isAuthenticated}>
+        <AuthGuard>
           <Suspense
             fallback={
               <div className="h-full w-full flex items-center justify-center">

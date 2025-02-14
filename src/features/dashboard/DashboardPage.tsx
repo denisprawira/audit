@@ -15,6 +15,10 @@ const Dashboard = () => {
     }
   }, [userData]);
 
+  useEffect(() => {
+    console.log("test");
+  }, []);
+
   return (
     <div className="flex h-full flex-col">
       <Header />
