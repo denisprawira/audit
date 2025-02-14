@@ -6,8 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import supabaseClient from "@/features/auth/utils/SupabaseClient";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense } from "react";
 import Loader from "@/components/loader/Loader";
 import StockOpname from "@/features/stock-opname/so-page";
 import { RowData } from "@tanstack/react-table";
